@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母乳喂养10问10答-国家卫健委 - 奶粉科普知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --accent: #f43f5e;
+            --accent-soft: #fff1f2;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+            --muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.7);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Prose Styles */
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose h2::before {
+            content: '';
+            width: 8px;
+            height: 1.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        
+        .prose blockquote {
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--primary-soft);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+        }
+        .callout-important { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .callout-info { background: #eff6ff; border-color: #dbeafe; color: #1e40af; }
+        .callout-tip { background: #f0fdf4; border-color: #dcfce7; color: #166534; }
+        
+        .callout-title {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td { padding: 1rem; border-bottom: 1px solid #f1f5f9; }
+        
+        /* Q&A Accordion */
+        .qa-card {
+            transition: all 0.3s ease;
+        }
+        .qa-card.active .qa-answer { display: block; }
+        .qa-card.active .qa-icon { transform: rotate(180deg); }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-12">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black tracking-tight text-slate-800">Milk Powder Wiki</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i> 知识门户
+                </a>
+                <a href="../../index.html" target="_top" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> 返回图谱
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-6 pb-32">
+        <header class="mb-20 text-center">
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">专题</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">母乳喂养</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">婴幼儿营养</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">国家卫健委</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">官方指南</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                <span class="gradient-text">母乳喂养10问10答-国家卫健委</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2026-05-15
+                </span>
+                <span class="hidden md:inline w-1 h-1 rounded-full bg-slate-200"></span>
+                <span class="flex items-center gap-2 text-blue-500">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i> 国家卫生健康委员会
+                </span>
+            </div>
+        </header>
+
+        <div class="prose content">
+            <h1>母乳喂养10问10答（国家卫健委）</h1>
+<blockquote>
+<p>世界卫生组织建议，在婴儿最初6个月内给予纯母乳喂养。6个月至2岁或更长时间内，在继续母乳喂养的同时，要补充其他的食物。</p>
+</blockquote>
+<hr />
+<h2>Q1: 怎样进行母乳喂养有利于婴儿的健康？</h2>
+<p>世卫组织建议，在婴儿最初6个月内给予纯母乳喂养。6个月至2岁或更长时间内，在继续母乳喂养的同时，要补充其他的食物。有一些措施帮助母乳喂养顺利进行：</p>
+<ul>
+<li>在婴儿出生的头一个小时里就开始母乳喂养</li>
+<li><strong>&quot;根据需要&quot;进行母乳喂养</strong>（按需哺乳），也就是不管白天或是晚上，婴儿一旦有需要就要进行喂养</li>
+<li><strong>不使用奶瓶或安慰奶嘴</strong></li>
+</ul>
+<hr />
+<h2>Q2: 母乳喂养对婴儿健康有什么益处？</h2>
+<p>母乳是新生儿及婴儿最理想的食物：</p>
+<ul>
+<li>提供婴儿健康发育所需的<strong>所有营养</strong></li>
+<li>帮助建立<strong>亲密的亲子关系</strong></li>
+<li>降低儿童肥胖和<strong>一些成年期慢性病</strong>的风险</li>
+<li>含有可帮助婴儿抵抗婴幼儿常见病的<strong>抗体</strong></li>
+<li>预防<strong>腹泻病和肺炎</strong>等感染性疾病</li>
+<li><strong>及时方便、成本低</strong></li>
+</ul>
+<hr />
+<h2>Q3: 母乳喂养对母亲有什么益处？</h2>
+<p>母乳喂养也使母亲受益：</p>
+<ul>
+<li>纯母乳喂养产生自然（尽管不是绝对安全的）<strong>避孕效果</strong>（生产后的头六个月内具有98%的保护作用）</li>
+<li>降低患<strong>乳腺癌和卵巢癌</strong>的风险</li>
+<li>有助于妇女更快恢复到孕前体重，<strong>降低肥胖</strong>发生</li>
+</ul>
+<hr />
+<h2>Q4: 母乳喂养对儿童带来哪些长期的益处？</h2>
+<p>除了直接益处之外，母乳喂养有益于儿童的终身健康：</p>
+<ul>
+<li>婴幼儿时期母乳喂养儿童，在成年之后往往<strong>血压及胆固醇水平较低</strong></li>
+<li><strong>超重、肥胖及2型糖尿病发生率较低</strong></li>
+<li>有证据显示，获得母乳喂养的人群其<strong>智力测试的成绩会更好</strong></li>
+</ul>
+<hr />
+<h2>Q5: 为什么不用婴儿配方粉？</h2>
+<ul>
+<li>婴儿配方粉<strong>不含母乳中存在的抗体</strong></li>
+<li>如果制备不当，会因使用了不安全的水和未经消毒的设备，或者由于粉状配方粉可能存在的细菌而具有一定危险</li>
+<li>为增加配方粉使用时间而过度稀释，可导致<strong>营养不良</strong></li>
+<li>使用配方粉而又缺乏供应时，要返回到母乳喂养方式则可能不太可行，因为<strong>母乳产出量会减少</strong></li>
+</ul>
+<hr />
+<h2>Q6: 艾滋病毒感染的母亲能否进行母乳喂养？</h2>
+<p>受到艾滋病毒感染的母亲可在孕期、生产时以及通过母乳喂养使婴儿获得感染。对母亲或者对受到艾滋病毒暴露的婴儿实施<strong>抗逆转录病毒药物干预</strong>，可降低通过母乳喂养传播艾滋病毒的风险。</p>
+<p>母乳喂养和抗逆转录病毒药物干预加在一起，可在保持婴儿不被感染艾滋病毒的同时，<strong>大大提高其生存机会</strong>。</p>
+<p>世卫组织建议：当受到艾滋病毒感染的母亲进行母乳喂养时，应当接受抗逆转录病毒药物治疗，并且遵循世卫组织在母乳喂养和补充喂养方面的指导意见。</p>
+<hr />
+<h2>Q7: 《国际母乳代用品销售守则》的主要内容是什么？</h2>
+<p>1981年世界卫生大会通过了《国际母乳代用品销售守则》。该守则要求：</p>
+<ul>
+<li>所有配方粉的标签和信息都要标明<strong>母乳喂养的好处</strong>以及使用代用品的<strong>健康风险</strong></li>
+<li><strong>不得促销</strong>母乳代用品</li>
+<li>不给孕妇、母亲及其家庭提供免费的代用品的样品</li>
+<li>不向卫生工作者或卫生机构分发免费或补贴性代用品</li>
+</ul>
+<hr />
+<h2>Q8: 为什么需要帮助和支持母乳喂养的母亲？</h2>
+<p>母乳喂养需要学习，许多妇女在喂养之初遇到很多困难：</p>
+<ul>
+<li><strong>乳头疼痛</strong></li>
+<li>担心<strong>母乳不足</strong>维持婴儿的需要</li>
+</ul>
+<p>这些都是很常见的。支持母乳喂养的卫生机构，可由经过培训的<strong>母乳喂养咨询员</strong>向初为人母的产妇提供咨询，来提高母乳喂养率。</p>
+<p>为了向母亲及新生儿提供支持并改进关怀程度，在世卫组织和联合国儿童基金会联合行动支持下，目前在152个国家建立了超过两万所**&quot;爱婴医院&quot;**。</p>
+<hr />
+<h2>Q9: 如何帮助职业妇女进行母乳喂养？</h2>
+<p>由于没有进行母乳喂养、挤奶和存放母奶的充分条件（时间或地点），许多母亲在回到工作岗位后就完全或者部分放弃了母乳喂养。</p>
+<p>母亲们需要在<strong>工作地点或者近处</strong>有一个安全、清洁并且私密的地方继续进行母乳喂养。能够带来帮助的就是在工作上创造有利条件，比如：</p>
+<ul>
+<li><strong>带薪产假</strong></li>
+<li><strong>兼职工作</strong></li>
+<li><strong>育儿室</strong></li>
+<li>用以进行<strong>挤奶和存放母奶的设施</strong></li>
+<li><strong>哺乳时间</strong></li>
+</ul>
+<hr />
+<h2>Q10: 6个月之后，如何继续母乳喂养，并逐步添加新食品？</h2>
+<p>为满足6个月婴儿日益增长的需求，在对他们继续母乳喂养时应<strong>添加辅食</strong>。对婴儿的辅食可专门准备，也可从家庭饮食中调制。</p>
+<h3>关键提示：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">原则</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">✅ <strong>不应停止母乳喂养</strong></td>
+<td style="text-align:left">开始添加辅食时，继续母乳喂养</td>
+</tr>
+<tr>
+<td style="text-align:left">✅ <strong>用汤匙或杯子</strong></td>
+<td style="text-align:left">而不是用瓶子来给婴儿喂辅食</td>
+</tr>
+<tr>
+<td style="text-align:left">✅ <strong>清洁安全</strong></td>
+<td style="text-align:left">辅食应该是清洁、安全并可从当地获得的</td>
+</tr>
+<tr>
+<td style="text-align:left">✅ <strong>给予时间</strong></td>
+<td style="text-align:left">幼儿学会吃固体食物需要有足够的时间</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>相关页面</h2>
+<ul>
+<li><a href="../index.html" class="text-blue-600 font-bold hover:underline">index</a></li>
+<li><a href="奶粉的分段与营养逻辑.html" class="text-blue-600 font-bold hover:underline">topics/奶粉的分段与营养逻辑</a></li>
+<li><a href="科学使用与冲调规范.html" class="text-blue-600 font-bold hover:underline">topics/科学使用与冲调规范</a></li>
+<li><a href="权威信息查询渠道.html" class="text-blue-600 font-bold hover:underline">topics/权威信息查询渠道</a></li>
+</ul>
+
+        </div>
+        
+        
+
+        <footer class="mt-40 pt-20 border-t border-slate-100 relative">
+            <div class="absolute -top-px left-0 w-20 h-px bg-blue-600"></div>
+            
+            <div class="mb-16">
+                <h4 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-8">相关知识点 · RELATED</h4>
+                <div class="flex flex-wrap gap-3">
+                    <a href="奶粉的分段与营养逻辑.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">奶粉的分段与营养逻辑</a><a href="科学使用与冲调规范.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">科学使用与冲调规范</a><a href="权威信息查询渠道.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">权威信息查询渠道</a>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h5 class="text-xl font-black mb-2">科学育儿，从看懂配方开始</h5>
+                    <p class="text-slate-400 text-sm">奶粉百科智能知识库 · 2026 深度版</p>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+        
+        // Handle Accordion Logic
+        document.querySelectorAll('.qa-card-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

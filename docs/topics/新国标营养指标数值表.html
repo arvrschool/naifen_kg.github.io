@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新国标营养指标数值表 - 奶粉科普知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --accent: #f43f5e;
+            --accent-soft: #fff1f2;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+            --muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.7);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Prose Styles */
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose h2::before {
+            content: '';
+            width: 8px;
+            height: 1.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        
+        .prose blockquote {
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--primary-soft);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+        }
+        .callout-important { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .callout-info { background: #eff6ff; border-color: #dbeafe; color: #1e40af; }
+        .callout-tip { background: #f0fdf4; border-color: #dcfce7; color: #166534; }
+        
+        .callout-title {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td { padding: 1rem; border-bottom: 1px solid #f1f5f9; }
+        
+        /* Q&A Accordion */
+        .qa-card {
+            transition: all 0.3s ease;
+        }
+        .qa-card.active .qa-answer { display: block; }
+        .qa-card.active .qa-icon { transform: rotate(180deg); }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-12">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black tracking-tight text-slate-800">Milk Powder Wiki</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i> 知识门户
+                </a>
+                <a href="../../index.html" target="_top" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> 返回图谱
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-6 pb-32">
+        <header class="mb-20 text-center">
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">专题</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">工具</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">新国标</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">营养指标</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                <span class="gradient-text">新国标营养指标数值表</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2026-05-11
+                </span>
+                <span class="hidden md:inline w-1 h-1 rounded-full bg-slate-200"></span>
+                <span class="flex items-center gap-2 text-blue-500">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i> GB 10765-2021、GB 10766-2021、GB 10767-2021 国家食品安全标准原文
+                </span>
+            </div>
+        </header>
+
+        <div class="prose content">
+            <h1>奶粉新国标 (2021版) 核心营养指标数值表</h1>
+<blockquote>
+<p>本表基于 GB 10765-2021、GB 10766-2021 及 GB 10767-2021 原文校对，是测评中国市售奶粉的核心依据。</p>
+<p><strong>数据来源</strong>：国家卫生健康委员会发布的食品安全国家标准原文，已与知识库中PDF文件校对。</p>
+</blockquote>
+<h2>1. 婴儿配方食品 (1段: 0-6月龄) - GB 10765-2021</h2>
+<p><strong>能量要求</strong>：60 - 70 kcal/100mL</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">营养素</th>
+<th style="text-align:left">单位</th>
+<th style="text-align:left">每 100 kcal 限量 (Min - Max)</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>蛋白质 (乳基)</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">1.8 - 3.0</td>
+<td style="text-align:left"><strong>乳清蛋白占比 ≥ 60%</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>脂肪</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">4.4 - 6.0</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-- 亚油酸</td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">0.3 - 1.4</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-- α-亚麻酸</td>
+<td style="text-align:left">mg</td>
+<td style="text-align:left">≥ 50</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>碳水化合物</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">9.0 - 14.0</td>
+<td style="text-align:left"><strong>严禁添加果糖、白砂糖</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>乳糖占比</strong></td>
+<td style="text-align:left">%</td>
+<td style="text-align:left">≥ 90</td>
+<td style="text-align:left">仅限乳基产品</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>维生素 D</strong></td>
+<td style="text-align:left">μg</td>
+<td style="text-align:left">2.0 - 5.0</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>胆碱</strong></td>
+<td style="text-align:left">mg</td>
+<td style="text-align:left">20 - 100</td>
+<td style="text-align:left"><strong>必需成分</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>锰 / 硒</strong></td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left"><strong>必需成分</strong> (锰: 3.0-100μg; 硒: 3.0-8.6μg)</td>
+</tr>
+</tbody>
+</table>
+<h2>2. 较大婴儿配方食品 (2段: 6-12月龄) - GB 10766-2021</h2>
+<p><strong>能量要求</strong>：60 - 75 kcal/100mL</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">营养素</th>
+<th style="text-align:left">单位</th>
+<th style="text-align:left">每 100 kcal 限量 (Min - Max)</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>蛋白质 (乳基)</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">1.8 - 3.5</td>
+<td style="text-align:left"><strong>乳清蛋白占比 ≥ 40%</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>脂肪</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">3.5 - 6.0</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>碳水化合物</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">9.0 - 14.0</td>
+<td style="text-align:left"><strong>严禁添加果糖、白砂糖</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>乳糖占比</strong></td>
+<td style="text-align:left">%</td>
+<td style="text-align:left">≥ 90</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>胆碱 / 锰 / 硒</strong></td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left"><strong>必需成分</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>3. 幼儿配方食品 (3段: 12-36月龄) - GB 10767-2021</h2>
+<p><strong>能量要求</strong>：60 - 80 kcal/100mL</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">营养素</th>
+<th style="text-align:left">单位</th>
+<th style="text-align:left">每 100 kcal 限量 (Min - Max)</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>蛋白质 (乳基)</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">1.8 - 4.0</td>
+<td style="text-align:left">无乳清蛋白比例强制要求</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>碳水化合物</strong></td>
+<td style="text-align:left">g</td>
+<td style="text-align:left">7.5 - 15.0</td>
+<td style="text-align:left"><strong>3段新增指标要求</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>乳糖占比</strong></td>
+<td style="text-align:left">%</td>
+<td style="text-align:left">≥ 50</td>
+<td style="text-align:left">门槛大幅低于 1/2 段</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>胆碱 / 锰 / 硒</strong></td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left"><strong>可选择成分</strong> (非必需)</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 专家 Q&amp;A (知识闯关题库)</h2>
+<p>❓ &quot;新国标对 1 段奶粉乳清蛋白比例的要求是多少？&quot;
+答：乳清蛋白占比必须 ≥ 60%。这是因为乳清蛋白在胃中形成的凝块较软，更适合新生儿娇嫩的肠胃消化。</p>
+<p>❓ &quot;3 段奶粉是否可以添加白砂糖或香精？&quot;
+答：新国标 3 段奶粉依然严禁添加果糖、白砂糖和葡萄糖浆。但 3 段允许适量添加食用香精（如香兰素），而 1 段和 2 段则是绝对禁止添加香精的。</p>
+<p>❓ &quot;DHA 和 ARA 的比例在新国标中有什么特殊规定？&quot;
+答：在 1 段和 2 段中，如果添加了 DHA，则必须至少添加相同含量的 ARA（即 ARA ≥ DHA），这是为了模拟母乳中的天然配比。</p>
+<h2>4. 可选择成分 (特色强化配方) 限量对比</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">成分</th>
+<th style="text-align:left">单位</th>
+<th style="text-align:left">1段 (0-6月)</th>
+<th style="text-align:left">2段 (6-12月)</th>
+<th style="text-align:left">3段 (12-36月)</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>DHA</strong></td>
+<td style="text-align:left">mg/100kcal</td>
+<td style="text-align:left">15 - 40</td>
+<td style="text-align:left">15 - 40</td>
+<td style="text-align:left">N.S. - 40</td>
+<td style="text-align:left">3段无最小值限制</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ARA</strong></td>
+<td style="text-align:left">mg/100kcal</td>
+<td style="text-align:left">30 - 80</td>
+<td style="text-align:left">30 - 80</td>
+<td style="text-align:left">N.S. - 80</td>
+<td style="text-align:left">1/2段要求 ARA ≥ DHA</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>牛磺酸</strong></td>
+<td style="text-align:left">mg/100kcal</td>
+<td style="text-align:left">3.5 - 16.7</td>
+<td style="text-align:left">3.5 - 16.7</td>
+<td style="text-align:left">3.5 - 16.7</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>核苷酸</strong></td>
+<td style="text-align:left">mg/100kcal</td>
+<td style="text-align:left">1.2 - 6.7</td>
+<td style="text-align:left">1.2 - 6.7</td>
+<td style="text-align:left">1.2 - 6.7</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>关键提示 (基于原文阅读)</h2>
+<ol>
+<li><strong>DHA 保护机制</strong>：在 1 段和 2 段中，如果添加了 DHA，则必须至少添加相同量的 ARA。且二十碳五烯酸 (EPA) 的量不得超过 DHA 的量。</li>
+<li><strong>2 段奶粉的独立性</strong>：GB 10766 是本次修订最大的亮点，它终结了 2 段奶粉&quot;挂靠&quot; 3 段标准的历史，对蛋白质质量的要求远高于 3 段。</li>
+<li><strong>标签禁令</strong>：原文明确规定标签上不得使用&quot;人乳化&quot;、&quot;母乳化&quot;或近似术语。</li>
+</ol>
+<hr />
+<h2>相关页面</h2>
+<ul>
+<li><a href="../index.html" class="text-blue-600 font-bold hover:underline">index</a></li>
+<li><a href="2023新国标深度解读.html" class="text-blue-600 font-bold hover:underline">topics/2023新国标深度解读</a></li>
+<li><a href="新国标解读-武汉食检专家.html" class="text-blue-600 font-bold hover:underline">topics/新国标解读-武汉食检专家</a></li>
+<li><a href="奶粉的分段与营养逻辑.html" class="text-blue-600 font-bold hover:underline">topics/奶粉的分段与营养逻辑</a></li>
+</ul>
+
+        </div>
+        
+        
+
+        <footer class="mt-40 pt-20 border-t border-slate-100 relative">
+            <div class="absolute -top-px left-0 w-20 h-px bg-blue-600"></div>
+            
+            <div class="mb-16">
+                <h4 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-8">相关知识点 · RELATED</h4>
+                <div class="flex flex-wrap gap-3">
+                    <a href="奶粉的分段与营养逻辑.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">奶粉的分段与营养逻辑</a><a href="新国标解读-武汉食检专家.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">新国标解读-武汉食检专家</a><a href="2023新国标深度解读.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">2023新国标深度解读</a>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h5 class="text-xl font-black mb-2">科学育儿，从看懂配方开始</h5>
+                    <p class="text-slate-400 text-sm">奶粉百科智能知识库 · 2026 深度版</p>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+        
+        // Handle Accordion Logic
+        document.querySelectorAll('.qa-card-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

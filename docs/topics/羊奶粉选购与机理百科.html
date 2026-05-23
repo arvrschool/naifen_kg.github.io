@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羊奶粉选购与机理百科 - 奶粉科普知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --accent: #f43f5e;
+            --accent-soft: #fff1f2;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+            --muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.7);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Prose Styles */
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose h2::before {
+            content: '';
+            width: 8px;
+            height: 1.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        
+        .prose blockquote {
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--primary-soft);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+        }
+        .callout-important { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .callout-info { background: #eff6ff; border-color: #dbeafe; color: #1e40af; }
+        .callout-tip { background: #f0fdf4; border-color: #dcfce7; color: #166534; }
+        
+        .callout-title {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td { padding: 1rem; border-bottom: 1px solid #f1f5f9; }
+        
+        /* Q&A Accordion */
+        .qa-card {
+            transition: all 0.3s ease;
+        }
+        .qa-card.active .qa-answer { display: block; }
+        .qa-card.active .qa-icon { transform: rotate(180deg); }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-12">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black tracking-tight text-slate-800">Milk Powder Wiki</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i> 知识门户
+                </a>
+                <a href="../../index.html" target="_top" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> 返回图谱
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-6 pb-32">
+        <header class="mb-20 text-center">
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">专题</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">羊奶粉</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">消化吸收</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">低致敏</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                <span class="gradient-text">羊奶粉选购与机理百科</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2026-05-11
+                </span>
+                <span class="hidden md:inline w-1 h-1 rounded-full bg-slate-200"></span>
+                <span class="flex items-center gap-2 text-blue-500">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i> 公开的乳品科学资料 + AI知识汇编
+                </span>
+            </div>
+        </header>
+
+        <div class="prose content">
+            <h1>羊奶粉选购与生化机理百科</h1>
+<blockquote>
+<p>羊奶被誉为“奶中之王”，其核心优势在于更小的脂肪球直径和更亲和人体的蛋白质结构。</p>
+</blockquote>
+<h2>1. 核心生化优势</h2>
+<h3>1.1 小分子脂肪：易消化</h3>
+<p>羊奶的脂肪球直径比牛奶小约 1/3，且含有更丰富的中链脂肪酸 (MCT)。由于接触面积更大，胰脂肪酶能更迅速地将其分解，从而缩短消化时间，减少宝宝的肠胃负担。</p>
+<h3>1.2 A2 蛋白底色：天然亲和</h3>
+<p>羊奶天然含有 <strong>A2-β 酪蛋白</strong>，不含易致敏和导致肠道炎症的 A1 蛋白。同时，羊奶中的 αs1-酪蛋白含量极低（这种蛋白在胃中会形成较硬的凝块），因此羊奶在胃中形成的凝乳更细软，更易被吸收。</p>
+<h2>2. 羊奶粉选购“红线”</h2>
+<h3>2.1 区分“纯羊”与“半羊”</h3>
+<ul>
+<li><strong>纯羊乳蛋白</strong>：配料表中只有羊奶成分（如：全脂羊奶粉、脱脂羊奶粉、羊乳清粉）。这是目前高端羊奶粉的标准。</li>
+<li><strong>混合乳蛋白</strong>：配料表中混有“浓缩乳清蛋白（来源牛奶）”等成分。建议优先选择<strong>纯羊</strong>产品。</li>
+</ul>
+<h3>2.2 核心强化成分</h3>
+<p>高端羊奶粉通常会额外强化 <a href="../entities/OPO结构脂.html" class="text-blue-600 font-bold hover:underline">OPO结构脂</a> 和 <a href="../entities/乳铁蛋白.html" class="text-blue-600 font-bold hover:underline">乳铁蛋白</a>，以弥补羊奶在某些特定营养素上的天然局限。</p>
+<h2>3. 适用人群</h2>
+<ul>
+<li>肠胃娇嫩、容易胀气、吐奶的宝宝。</li>
+<li>对牛奶蛋白轻微敏感或不耐受的宝宝。</li>
+<li>追求极致吸收效率的家庭。</li>
+</ul>
+<hr />
+<h2>推荐档案</h2>
+<ul>
+<li><a href="sources/佳贝艾特-悦白-1段.html" class="text-blue-600 font-bold hover:underline">sources/佳贝艾特-悦白-1段</a> (纯羊标杆)</li>
+<li><a href="sources/蓝河-姆阿普-1段.html" class="text-blue-600 font-bold hover:underline">sources/蓝河-姆阿普-1段</a></li>
+<li><a href="sources/宜品-蓓康僖-1段.html" class="text-blue-600 font-bold hover:underline">sources/宜品-蓓康僖-1段</a></li>
+</ul>
+<hr />
+<h2>相关页面</h2>
+<ul>
+<li><a href="../index.html" class="text-blue-600 font-bold hover:underline">index</a></li>
+<li><a href="../entities/OPO结构脂.html" class="text-blue-600 font-bold hover:underline">entities/OPO结构脂</a></li>
+</ul>
+<hr />
+<h2>数据来源说明</h2>
+<blockquote>
+<p>羊奶营养学知识基于公开的科学文献整理。</p>
+</blockquote>
+
+        </div>
+        
+        
+
+        <footer class="mt-40 pt-20 border-t border-slate-100 relative">
+            <div class="absolute -top-px left-0 w-20 h-px bg-blue-600"></div>
+            
+            <div class="mb-16">
+                <h4 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-8">相关知识点 · RELATED</h4>
+                <div class="flex flex-wrap gap-3">
+                    <a href="sources/佳贝艾特-悦白-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/佳贝艾特-悦白-1段</a><a href="sources/宜品-蓓康僖-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/宜品-蓓康僖-1段</a><a href="../entities/乳铁蛋白.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">乳铁蛋白</a><a href="../entities/OPO结构脂.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">OPO结构脂</a><a href="sources/蓝河-姆阿普-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/蓝河-姆阿普-1段</a>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h5 class="text-xl font-black mb-2">科学育儿，从看懂配方开始</h5>
+                    <p class="text-slate-400 text-sm">奶粉百科智能知识库 · 2026 深度版</p>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+        
+        // Handle Accordion Logic
+        document.querySelectorAll('.qa-card-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

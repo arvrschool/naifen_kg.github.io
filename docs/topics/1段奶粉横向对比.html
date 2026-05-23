@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1段奶粉横向对比 - 奶粉科普知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --accent: #f43f5e;
+            --accent-soft: #fff1f2;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+            --muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.7);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Prose Styles */
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose h2::before {
+            content: '';
+            width: 8px;
+            height: 1.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        
+        .prose blockquote {
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--primary-soft);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+        }
+        .callout-important { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .callout-info { background: #eff6ff; border-color: #dbeafe; color: #1e40af; }
+        .callout-tip { background: #f0fdf4; border-color: #dcfce7; color: #166534; }
+        
+        .callout-title {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td { padding: 1rem; border-bottom: 1px solid #f1f5f9; }
+        
+        /* Q&A Accordion */
+        .qa-card {
+            transition: all 0.3s ease;
+        }
+        .qa-card.active .qa-answer { display: block; }
+        .qa-card.active .qa-icon { transform: rotate(180deg); }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-12">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black tracking-tight text-slate-800">Milk Powder Wiki</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i> 知识门户
+                </a>
+                <a href="../../index.html" target="_top" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> 返回图谱
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-6 pb-32">
+        <header class="mb-20 text-center">
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                <span class="gradient-text">1段奶粉横向对比</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2026-05-19
+                </span>
+                <span class="hidden md:inline w-1 h-1 rounded-full bg-slate-200"></span>
+                <span class="flex items-center gap-2 text-blue-500">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i> 权威数据库
+                </span>
+            </div>
+        </header>
+
+        <div class="prose content">
+            <h1>1段奶粉横向对比表</h1>
+<blockquote>
+<p>数据来源：国家市场监管总局 + 淘宝官方旗舰店 (2026-05-16 OpenCLI采集) | 共 15 款</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">品牌</th>
+<th style="text-align:left">系列</th>
+<th style="text-align:left">淘宝价</th>
+<th style="text-align:left">DHA</th>
+<th style="text-align:left">OPO</th>
+<th style="text-align:left">乳铁蛋白</th>
+<th style="text-align:left">奶源</th>
+<th style="text-align:left">糖</th>
+<th style="text-align:left">香精</th>
+<th style="text-align:left">特色标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A2</td>
+<td style="text-align:left">至初</td>
+<td style="text-align:left">¥400</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">135mg</td>
+<td style="text-align:left">新西兰</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">亲和肠胃, 肚肚舒服, 吸收优选</td>
+</tr>
+<tr>
+<td style="text-align:left">伊利</td>
+<td style="text-align:left">金领冠珍护</td>
+<td style="text-align:left">¥2100</td>
+<td style="text-align:left">100.0mg</td>
+<td style="text-align:left">6.0g</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">伊利自有牧场奶源</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">吸收优选, 亲和肠胃, 智力发育</td>
+</tr>
+<tr>
+<td style="text-align:left">佳贝艾特 (Kabrita)</td>
+<td style="text-align:left">悦白 (新国标版)</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">荷兰</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">羊奶粉, 极度敏感, 消化刺客</td>
+</tr>
+<tr>
+<td style="text-align:left">合生元</td>
+<td style="text-align:left">派星</td>
+<td style="text-align:left">¥199</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">免疫力护盾, 软化便便, 断奶接力</td>
+</tr>
+<tr>
+<td style="text-align:left">君乐宝</td>
+<td style="text-align:left">至臻</td>
+<td style="text-align:left">¥1548</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">4.5g</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">中国</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">国产头部</td>
+</tr>
+<tr>
+<td style="text-align:left">喜宝</td>
+<td style="text-align:left">培儿贝瑞</td>
+<td style="text-align:left">¥1600</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">极致纯净, 德国有机, 清淡口味</td>
+</tr>
+<tr>
+<td style="text-align:left">惠氏</td>
+<td style="text-align:left">S-26金装</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">脑部发育, 眼脑连接, 学习力</td>
+</tr>
+<tr>
+<td style="text-align:left">惠氏</td>
+<td style="text-align:left">启赋蓝钻</td>
+<td style="text-align:left">¥2034</td>
+<td style="text-align:left">92.0mg</td>
+<td style="text-align:left">4.0g</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">爱尔兰进口奶源</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">断奶过渡, 免疫力, 脑部发育</td>
+</tr>
+<tr>
+<td style="text-align:left">爱他美</td>
+<td style="text-align:left">领熠</td>
+<td style="text-align:left">¥2369.9</td>
+<td style="text-align:left">93.0mg</td>
+<td style="text-align:left">4.7g</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">荷兰 (黄金奶源带)</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">肠道守护, 自护力, 剖宫产优选</td>
+</tr>
+<tr>
+<td style="text-align:left">美素佳儿</td>
+<td style="text-align:left">皇家美素力</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">82.0mg</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">450mg</td>
+<td style="text-align:left">荷兰</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">国际巨头</td>
+</tr>
+<tr>
+<td style="text-align:left">美赞臣</td>
+<td style="text-align:left">蓝臻 (新国标版)</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">78.0mg</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">330mg</td>
+<td style="text-align:left">荷兰</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">免疫力王者, 易病体质, 断奶神盾</td>
+</tr>
+<tr>
+<td style="text-align:left">蓝河</td>
+<td style="text-align:left">绵羊奶粉</td>
+<td style="text-align:left">¥66.9</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">顶配羊奶, 免疫力天花板, 土豪之选</td>
+</tr>
+<tr>
+<td style="text-align:left">贝因美</td>
+<td style="text-align:left">爱加</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">38mg</td>
+<td style="text-align:left">中国</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">国产老牌</td>
+</tr>
+<tr>
+<td style="text-align:left">雀巢 (Nestle)</td>
+<td style="text-align:left">铂初能恩 (大陆版)</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">中国黑龙江 (双城雀</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">水解防敏, 湿疹腹泻, 易敏体质</td>
+</tr>
+<tr>
+<td style="text-align:left">飞鹤</td>
+<td style="text-align:left">星飞帆</td>
+<td style="text-align:left">¥330.8</td>
+<td style="text-align:left">90.0mg</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">中国黑龙江 (黄金奶</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">✅</td>
+<td style="text-align:left">便秘克星, 均衡发育, 高性价比</td>
+</tr>
+</tbody>
+</table>
+<h2>官网已验证营养数据（完整营养表）</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">品牌</th>
+<th style="text-align:left">系列</th>
+<th style="text-align:left">蛋白质</th>
+<th style="text-align:left">脂肪</th>
+<th style="text-align:left">DHA</th>
+<th style="text-align:left">ARA</th>
+<th style="text-align:left">OPO</th>
+<th style="text-align:left">乳铁蛋白</th>
+<th style="text-align:left">GOS</th>
+<th style="text-align:left">FOS</th>
+<th style="text-align:left">核苷酸</th>
+<th style="text-align:left">叶黄素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">贝因美</td>
+<td style="text-align:left">爱加</td>
+<td style="text-align:left">11.00</td>
+<td style="text-align:left">27.10</td>
+<td style="text-align:left">126.0</td>
+<td style="text-align:left">189.0</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">38.0</td>
+<td style="text-align:left">1.5</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">30.0</td>
+<td style="text-align:left">50.0</td>
+</tr>
+</tbody>
+</table>
+<h2>备注</h2>
+<ul>
+<li>✅ 安全无添加  ❌ 含争议成分  ? 未标注  - 无数据</li>
+<li>价格：2026年5月淘宝官方旗舰店搜索（部分为多罐套装价，仅供参考）</li>
+<li>官网完整营养表已验证：1 款（贝因美）</li>
+<li>其余产品营养数据需从官网补充</li>
+</ul>
+
+        </div>
+        
+        
+
+        <footer class="mt-40 pt-20 border-t border-slate-100 relative">
+            <div class="absolute -top-px left-0 w-20 h-px bg-blue-600"></div>
+            
+            <div class="mb-16">
+                <h4 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-8">相关知识点 · RELATED</h4>
+                <div class="flex flex-wrap gap-3">
+                    
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h5 class="text-xl font-black mb-2">科学育儿，从看懂配方开始</h5>
+                    <p class="text-slate-400 text-sm">奶粉百科智能知识库 · 2026 深度版</p>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+        
+        // Handle Accordion Logic
+        document.querySelectorAll('.qa-card-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

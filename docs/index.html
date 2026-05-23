@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶粉科普知识库 - 喂养知识中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-24">
+        <header class="mb-32 text-center">
+            <motion-div initial="opacity: 0, y: 20" animate="opacity: 1, y: 0">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-600 text-xs font-bold mb-8 shadow-sm border border-blue-100/50">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-blue-500"></i>
+                    2023 奶粉新国标科普门户
+                </div>
+                <h1 class="text-6xl md:text-7xl font-black mb-8 tracking-tighter leading-tight">
+                    <span class="gradient-text serif">喂养知识中心</span>
+                </h1>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto font-light leading-relaxed">
+                    不仅仅是冷冰冰的数据，我们致力于将复杂的<span class="text-slate-900 font-bold">科研成果</span>转化为每一位家长都能听懂的<span class="text-slate-900 font-bold">成长寄语</span>。
+                </p>
+            </motion-div>
+        </header>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-200">
+                    <i data-lucide="layout-grid" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-black tracking-tight serif text-slate-900">专题深度研究</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+        <a href="topics/16款全主流品牌1段奶粉全元素测评.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">16款全主流品牌1段奶粉全元素测评</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/1段奶粉全元素营养对比分析报告.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">1段奶粉全元素营养对比分析报告</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/1段奶粉横向对比.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">1段奶粉横向对比</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/2023新国标深度解读.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">奶粉选购</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">2023新国标深度解读</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/各个品牌1段营养成分差异比较.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">各个品牌1段营养成分差异比较</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/品牌对比分析.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">品牌分析</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">品牌对比分析</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/奶粉工艺与奶源百科.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">工艺</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">奶粉工艺与奶源百科</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/奶粉标签科普-央广网.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">科普</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">奶粉标签科普-央广网</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-15</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/奶粉的分段与营养逻辑.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">奶粉选购</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">奶粉的分段与营养逻辑</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/奶粉选购决策树.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">选购指南</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">奶粉选购决策树</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/奶粉黑话通俗词典.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">科普</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">奶粉黑话通俗词典</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/新国标营养指标数值表.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">工具</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">新国标营养指标数值表</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/新国标解读-武汉食检专家.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">新国标</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">新国标解读-武汉食检专家</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-15</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/权威信息查询渠道.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">工具</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">权威信息查询渠道</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/母乳喂养10问10答-国家卫健委.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">母乳喂养</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">母乳喂养10问10答-国家卫健委</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-15</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/科学使用与冲调规范.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">喂养指南</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">科学使用与冲调规范</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/羊奶粉与常规奶粉的异同点.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">科普</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">奶粉知识</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">羊奶粉与常规奶粉的异同点</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-17</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/羊奶粉选购与机理百科.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">羊奶粉</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">羊奶粉选购与机理百科</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/过敏宝宝如何选择水解奶粉.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">过敏</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">过敏宝宝如何选择水解奶粉</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="topics/进口奶粉vs国产奶粉深度对比.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">专题</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">选购技巧</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">进口奶粉vs国产奶粉深度对比</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-11</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-rose-200">
+                    <i data-lucide="beaker" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-black tracking-tight serif text-slate-900">核心营养词条</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+        <a href="entities/A2蛋白.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">A2蛋白</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/CPP.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">CPP</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/GOS-FOS.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">GOS-FOS</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/HMOs.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">HMOs</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/MFGM.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">MFGM</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/OPO结构脂.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">OPO结构脂</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+        <a href="entities/乳铁蛋白.html" class="card-hover glass p-8 rounded-[2.5rem] flex flex-col h-full group">
+            <div class="flex justify-between items-start mb-6">
+                <div class="p-3 rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="flex gap-1">
+                    <span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">营养素</span><span class="px-2 py-0.5 bg-slate-100 text-slate-500 text-[9px] font-black uppercase tracking-widest rounded-md">成分百科</span>
+                </div>
+            </div>
+            <h3 class="text-xl font-black text-slate-800 mb-4 serif group-hover:text-blue-600 transition-colors leading-tight">乳铁蛋白</h3>
+            <div class="mt-auto flex items-center justify-between text-slate-400">
+                <span class="text-[10px] font-bold tracking-widest uppercase">2026-05-19</span>
+                <i data-lucide="chevron-right" class="w-4 h-4 transform group-hover:translateX-1 transition-all"></i>
+            </div>
+        </a>
+        
+            </div>
+        </section>
+
+        <footer class="mt-40 py-24 bg-slate-900 rounded-[3rem] px-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+            <div class="relative z-10">
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-white">
+                        <i data-lucide="book-open" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-2xl font-black tracking-tighter text-white leading-none">Milk Powder Wiki</div>
+                        <div class="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] mt-1">Science & Love</div>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm font-bold tracking-tight mb-8">
+                    © 2026 科学育儿知识库 · 基于 2023 新国标深度解构
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="../index.html" target="_top" class="px-6 py-3 bg-white/5 hover:bg-white/10 text-white text-xs font-bold rounded-xl transition-all border border-white/10 flex items-center gap-2">
+                        <i data-lucide="home" class="w-4 h-4"></i> 返回图谱首页
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

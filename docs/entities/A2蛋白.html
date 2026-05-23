@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2蛋白 - 奶粉科普知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.321.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-soft: #eff6ff;
+            --accent: #f43f5e;
+            --accent-soft: #fff1f2;
+            --bg: #fdfcfb;
+            --text: #1e293b;
+            --muted: #64748b;
+            --glass: rgba(255, 255, 255, 0.7);
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Noto Sans SC', sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        .serif { font-family: 'Noto Serif SC', serif; }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #e2e8f0 1.5px, transparent 0);
+            background-size: 48px 48px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Prose Styles */
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 900;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .prose h2::before {
+            content: '';
+            width: 8px;
+            height: 1.5rem;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .prose p { margin-bottom: 1.5rem; }
+        .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+        
+        .prose blockquote {
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: var(--primary-soft);
+            border-radius: 1.5rem;
+            border-left: 4px solid var(--primary);
+            font-style: italic;
+            color: #1e40af;
+        }
+        
+        .callout {
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 1.5rem;
+            border: 1px solid transparent;
+        }
+        .callout-important { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
+        .callout-info { background: #eff6ff; border-color: #dbeafe; color: #1e40af; }
+        .callout-tip { background: #f0fdf4; border-color: #dcfce7; color: #166534; }
+        
+        .callout-title {
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        table {
+            width: 100%;
+            margin: 2.5rem 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #475569;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        td { padding: 1rem; border-bottom: 1px solid #f1f5f9; }
+        
+        /* Q&A Accordion */
+        .qa-card {
+            transition: all 0.3s ease;
+        }
+        .qa-card.active .qa-answer { display: block; }
+        .qa-card.active .qa-icon { transform: rotate(180deg); }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-blue-100">
+    <div class="fixed inset-0 -z-10 opacity-[0.4] grid-pattern"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-blue-100/30 blur-[120px] rounded-full animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] bg-purple-100/20 blur-[120px] rounded-full animate-float" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-12">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <span class="font-black tracking-tight text-slate-800">Milk Powder Wiki</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i> 知识门户
+                </a>
+                <a href="../../index.html" target="_top" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i data-lucide="home" class="w-4 h-4"></i> 返回图谱
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-6 pb-32">
+        <header class="mb-20 text-center">
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">营养素</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">成分百科</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">蛋白质结构</span><span class="px-3 py-1 bg-white text-slate-600 text-[10px] font-black uppercase tracking-widest rounded-full shadow-sm border border-slate-100">消化吸收</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black mb-8 leading-tight tracking-tighter">
+                <span class="gradient-text">A2蛋白</span>
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-bold text-xs uppercase tracking-widest">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2026-05-19
+                </span>
+                <span class="hidden md:inline w-1 h-1 rounded-full bg-slate-200"></span>
+                <span class="flex items-center gap-2 text-blue-500">
+                    <i data-lucide="shield-check" class="w-3 h-3"></i> 权威数据库
+                </span>
+            </div>
+        </header>
+
+        <div class="prose content">
+            <h1><a href="A2蛋白.html" class="text-blue-600 font-bold hover:underline">A2蛋白</a> (A2-β酪蛋白)</h1>
+<blockquote>
+<p>全称：A2-β 酪蛋白（A2 beta-casein）。它是牛奶中β-酪蛋白的一种天然变体，在蛋白结构上与母乳更为接近，被誉为&quot;更亲和的牛奶蛋白&quot;。</p>
+</blockquote>
+<h2>1. 生化机理</h2>
+<h3>A1 蛋白 vs A2 蛋白的差异：</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">对比维度</th>
+<th style="text-align:left">A1-β酪蛋白（普通牛奶）</th>
+<th style="text-align:left">A2-β酪蛋白（A2牛奶）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">第67位氨基酸</td>
+<td style="text-align:left"><strong>组氨酸 (His)</strong></td>
+<td style="text-align:left"><strong>脯氨酸 (Pro)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">消化产物</td>
+<td style="text-align:left">产生 β-酪啡肽-7 (BCM-7)</td>
+<td style="text-align:left">不产生 BCM-7</td>
+</tr>
+<tr>
+<td style="text-align:left">对肠道影响</td>
+<td style="text-align:left">BCM-7 可能引起炎症反应</td>
+<td style="text-align:left">无此风险</td>
+</tr>
+<tr>
+<td style="text-align:left">母乳相似度</td>
+<td style="text-align:left">低</td>
+<td style="text-align:left"><strong>高</strong>（母乳也是脯氨酸）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心机制</strong>：A1 蛋白被消化时会释放出 BCM-7（β-酪啡肽-7），这是一种阿片类活性肽，可能引起肠道蠕动减慢、炎症反应和乳糖不耐受样症状。A2 蛋白由于第 67 位是脯氨酸，肽键不易被酶切开，因此不产生 BCM-7。</p>
+<h3>古代 vs 现代：</h3>
+<ul>
+<li>数千年前，欧洲牛的基因发生突变，产生了 A1 蛋白</li>
+<li>纯 A2 牛奶更接近&quot;原始&quot;牛奶的蛋白结构</li>
+<li>现代选育可以恢复纯 A2 奶牛群</li>
+</ul>
+<h2>2. 核心功效</h2>
+<ul>
+<li><strong>减少肠胃不适</strong>：多项研究表明，A2 蛋白比普通牛奶蛋白引起的腹胀、腹痛症状更少</li>
+<li><strong>接近母乳</strong>：母乳中不含 A1 蛋白，主要为类似 A2 结构的 β-酪蛋白</li>
+<li><strong>可能减少乳糖不耐受感</strong>：部分&quot;乳糖不耐受&quot;症状可能实为 A1 蛋白引起的炎症反应</li>
+</ul>
+<h2>3. 常见误区</h2>
+<ul>
+<li>
+<p><strong>误区 1</strong>：A2 蛋白是&quot;无乳糖&quot;奶粉。</p>
+</li>
+<li>
+<p><strong>事实</strong>：A2 是蛋白质类型，和乳糖是两码事。A2 奶粉仍然含有乳糖。</p>
+</li>
+<li>
+<p><strong>误区 2</strong>：A2 奶粉 = 不含过敏原。</p>
+</li>
+<li>
+<p><strong>事实</strong>：A2 蛋白仍然是牛奶蛋白，对牛奶蛋白过敏的宝宝同样不能食用。</p>
+</li>
+<li>
+<p><strong>误区 3</strong>：所有羊奶粉都是 A2 蛋白。</p>
+</li>
+<li>
+<p><strong>事实</strong>：羊奶天然含 A2 型酪蛋白，但山羊奶和绵羊奶的蛋白质组成不同（绵羊奶含更多 αs1-酪蛋白）。</p>
+</li>
+</ul>
+<h2>4. 含有此成分的高分奶粉</h2>
+<ul>
+<li><a href="sources/A2-至初-1段.html" class="text-blue-600 font-bold hover:underline">sources/A2-至初-1段</a></li>
+<li><a href="sources/雀巢-铂初能恩-1段.html" class="text-blue-600 font-bold hover:underline">sources/雀巢-铂初能恩-1段</a></li>
+<li><a href="sources/君乐宝-至臻-1段.html" class="text-blue-600 font-bold hover:underline">sources/君乐宝-至臻-1段</a></li>
+<li>所有羊奶粉天然含 A2 蛋白</li>
+</ul>
+<hr />
+<h2>参考文献</h2>
+<ul>
+<li>He, M., et al. (2017). &quot;Effects of cow's milk beta-casein variants on symptoms of milk intolerance in Chinese adults.&quot; <em>Nutrition Journal</em>.</li>
+</ul>
+
+        </div>
+        
+        
+
+        <footer class="mt-40 pt-20 border-t border-slate-100 relative">
+            <div class="absolute -top-px left-0 w-20 h-px bg-blue-600"></div>
+            
+            <div class="mb-16">
+                <h4 class="text-sm font-black text-slate-400 uppercase tracking-[0.2em] mb-8">相关知识点 · RELATED</h4>
+                <div class="flex flex-wrap gap-3">
+                    <a href="sources/君乐宝-至臻-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/君乐宝-至臻-1段</a><a href="sources/雀巢-铂初能恩-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/雀巢-铂初能恩-1段</a><a href="A2蛋白.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">A2蛋白</a><a href="sources/A2-至初-1段.html" class="px-4 py-2 bg-white text-blue-600 text-xs font-bold rounded-xl shadow-sm border border-blue-50 hover:border-blue-200 transition-all">sources/A2-至初-1段</a>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 rounded-[2rem] p-10 text-white flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h5 class="text-xl font-black mb-2">科学育儿，从看懂配方开始</h5>
+                    <p class="text-slate-400 text-sm">奶粉百科智能知识库 · 2026 深度版</p>
+                </div>
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors">
+                    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+        
+        // Handle Accordion Logic
+        document.querySelectorAll('.qa-card-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
